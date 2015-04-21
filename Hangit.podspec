@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "Hangit"
-s.version          = "1.1.1"
+s.version          = "1.1.2"
 s.summary          = "Location Driven Mobile Marketing."
 s.description      = <<-DESC
 Supports iOS 7 and up. With Hangit, app publishers and marketers can get in front of their customers at precisely the right place and time and deliver a rich notification that is sure to get their attention.
