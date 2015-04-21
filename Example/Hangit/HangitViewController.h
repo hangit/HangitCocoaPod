@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HangitSDK/HangitSDK.h>
 
-@interface HangitViewController : UIViewController
+@interface HangitViewController : UIViewController <SessionManagerDelegate>
+
+/* Hangit SessionManager */
+@property (nonatomic, strong) SessionManager *sessionManager;
+
+/* Hangit MapManager */
+@property (nonatomic, strong) MapManager *mapManager;
+
+/* Hangit sessionKey Property */
+@property (nonatomic, retain) NSString * sessionKey;
+
 
 @end

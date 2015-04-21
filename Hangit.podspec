@@ -8,31 +8,24 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "Hangit"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of Hangit."
-  s.description      = <<-DESC
-                       An optional longer description of Hangit
+s.name             = "Hangit"
+s.version          = "1.1.0"
+s.summary          = "Location Driven Mobile Marketing."
+s.description      = <<-DESC
+Supports iOS 7 and up. With Hangit, app publishers and marketers can get in front of their customers at precisely the right place and time and deliver a rich notification that is sure to get their attention.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/Hangit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "John Dutchak" => "john.dutchak@hangit.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/Hangit.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.platform     = :ios, '7.0'
-  s.requires_arc = true
-
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Hangit' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+* Markdown format.
+* Don't worry about the indent, we strip it!
+DESC
+s.homepage         = "https://github.com/hangit/Hangit"
+s.license          = 'MIT'
+s.author           = { "John Dutchak" => "john.dutchak@hangit.com" }
+s.source           = { :git => "https://github.com/hangit/Hangit.git", :tag => s.version.to_s }
+s.platform     = :ios, '8.0'
+s.requires_arc = true
+s.source_files = 'Example/Hangit/*.{h,m}'
+s.resource_bundles = {
+'Hangit' => ['Example/HangitSDKResources.bundle']
+}
+s.vendored_frameworks = 'Example/HangitSDK.framework'
 end
