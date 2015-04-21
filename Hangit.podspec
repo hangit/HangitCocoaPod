@@ -28,4 +28,6 @@ s.resource_bundles = {
 'Hangit' => ['Example/HangitSDKResources.bundle']
 }
 s.vendored_frameworks = 'Example/HangitSDK.framework'
+s.resource = 'Example/HangitSDK.framework'
+s.xcconfig = { 'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks' }
 end
