@@ -17,7 +17,7 @@ Hangit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Hangit', '~> 1.1.4'
+pod 'Hangit', '~> 1.1.5'
 ```
 
 ## Author
