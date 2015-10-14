@@ -23,7 +23,30 @@
     self.sessionManager.presentNotifications = YES;
     self.sessionManager.presentOfferView = YES;
     
-    self.sessionKey = [self.sessionManager startSessionUsingLocation:@"YOURAPPID"];
+    self.sessionKey = [self.sessionManager startSession:@"YOURAPPID"];
+    
+    /**
+     *  Starts Location Manager in SDK
+     *  Use this method when you want to
+     *  offer location enabled deals
+     */
+    [self.sessionManager startLocation];
+    
+    /**
+     *  Stops Location Manager in SDK
+     *
+     *  Stops Location Manager in SDK
+     *  Use this method when you want to
+     *  stop offering location enabled deals
+     */
+    //    [self.sessionManager stopLocation];
+    
+    /**
+     *  Respond true or false wether location
+     *  is enabled or disabled by the user
+     *  for your app
+     */
+    //    [self.sessionManager isLocationEnabled];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(messageViewedNotification:)
@@ -42,7 +65,7 @@
     
     
     
-    [NSTimer scheduledTimerWithTimeInterval:5.0
+    [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
                                    selector:@selector(showMap)
                                    userInfo:nil
